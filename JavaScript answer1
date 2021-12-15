@@ -1,0 +1,14 @@
+function palindrome(str) {
+  var newArr = str.toLowerCase().split("");
+  var arr =[];
+  var arr2 =/[A-Za-z0-9]/g;
+  var c=false;
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i].match(arr2))
+    arr.unshift(newArr[i]);
+  }; 
+    if(arr.join("") == arr.reverse().join("")) {c= true}; 
+return c;
+}
+
+palindrome("_eye");
